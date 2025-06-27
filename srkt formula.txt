@@ -1,0 +1,91 @@
+# SRK/T Formula - Complete Reference Summary
+
+## Overview
+The SRK/T (Sanders-Retzlaff-Kraff Theoretical) formula is a theoretical IOL power calculation formula developed by Retzlaff, Sanders, and Kraff (1990). It combines theoretical optics with empirical optimization.
+
+## Main Formula
+```
+IOLemme = 1000 × na × (na × r - ncm1 × LOPT) / ((LOPT - ACDest) × (na × r - ncm1 × ACDest))
+```
+
+## Constants
+- **na** = 1.336 (refractive index of aqueous/vitreous)
+- **nc** = 1.333 (corneal refractive index)
+- **ncm1** = 0.333 (nc - 1)
+- **V** = 12 (vertex distance)
+
+## Step-by-Step Calculations
+
+### 1. Corneal Radius (r)
+```
+r = 337.5 / K
+```
+Where K = average keratometry in diopters
+
+### 2. Axial Length Correction (LCOR)
+```
+If L ≤ 24.2: LCOR = L
+If L > 24.2: LCOR = 3.446 + 1.716 × L - 0.0237 × L²
+```
+
+### 3. Corneal Width (Cw)
+```
+Cw = -5.41 + 0.58412 × LCOR + 0.098 × K
+```
+
+### 4. Corneal Height (H)
+```
+H = r - √(r² - (Cw²/4))
+```
+
+### 5. IOL Offset
+```
+Offset = ACDconst - 3.336
+```
+Where 3.336 mm = calculated iris plane in average eye
+
+### 6. Estimated Postoperative ACD
+```
+ACDest = H + Offset
+```
+
+### 7. Retinal Thickness Correction
+```
+RETHICK = 0.65696 - 0.02029 × L
+LOPT = L + RETHICK
+```
+
+### 8. A-Constant to ACD-Constant Conversion
+```
+ACDconst = 0.62467 × A - 68.747
+```
+
+## For Ametropic Targets
+```
+IOLamet = 1000 × na × (na × r - ncm1 × LOPT - 0.001 × REFTGT × (V × (na × r - ncm1 × LOPT) + LOPT × r)) / 
+          ((LOPT - ACDest) × (na × r - ncm1 × ACDest - 0.001 × REFTGT × (V × (na × r - ncm1 × ACDest) + ACDest × r)))
+```
+Where REFTGT = targeted refraction in diopters
+
+## Key Features
+1. **Theoretical basis**: Uses vergence optics rather than regression
+2. **Dynamic ACD prediction**: Adjusts for eye length using corneal height formula
+3. **Long eye correction**: Special adjustment for AL > 24.2 mm
+4. **Variable retinal thickness**: Decreases with longer eyes
+5. **Corneal refractive index**: Uses 1.333 (not 1.336)
+
+## Comparison with Original SRK
+- **SRK**: P = A - 2.5 × AL - 0.9 × K (empirical regression)
+- **SRK/T**: Theoretical formula based on optics
+
+## Clinical Application
+- More accurate than SRK, especially in extreme axial lengths
+- Requires A-constant or ACD-constant for specific IOL
+- Standard in modern biometry devices
+- Can be optimized for specific populations
+
+## Reference
+Retzlaff JA, Sanders DR, Kraff MC. Development of the SRK/T intraocular lens implant power calculation formula. J Cataract Refract Surg. 1990;16(3):333-340.
+
+---
+*Note: For FacoDMEK optimization, consider modifying the corneal refractive index, ACD prediction, or adding correction factors for posterior corneal changes.*
