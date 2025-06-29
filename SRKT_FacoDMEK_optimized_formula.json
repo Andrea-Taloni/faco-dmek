@@ -1,0 +1,32 @@
+{
+  "formula_name": "SRK/T-FacoDMEK-Optimized",
+  "optimization_date": "2025-06-29",
+  "training_cases": 67,
+  "test_cases": 30,
+  "optimal_nc": 1.33,
+  "baseline_mae": 1.2880827859072914,
+  "optimized_nc_mae": 0.9561641509842139,
+  "optimal_params_all": [
+    1.330030217390397,
+    -5.447164751566428,
+    0.5797997452686753,
+    0.0977605466583535,
+    0.6245767424023317,
+    68.46480101693591,
+    3.3488938516581834,
+    0.6554111580465597,
+    0.02030663422151059
+  ],
+  "param_names": [
+    "nc",
+    "cw_const1",
+    "cw_const2",
+    "cw_const3",
+    "acd_const1",
+    "acd_const2",
+    "offset_const",
+    "rethick_const1",
+    "rethick_const2"
+  ],
+  "full_optimized_mae": 0.8766122627315088
+}
