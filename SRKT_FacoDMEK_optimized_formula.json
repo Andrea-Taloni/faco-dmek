@@ -3,9 +3,9 @@
   "optimization_date": "2025-06-29",
   "training_cases": 67,
   "test_cases": 30,
-  "optimal_nc": 1.332,
+  "optimal_nc": 1.33,
   "baseline_mae": 1.3699087599865085,
-  "optimized_nc_mae": 1.2269766193651686,
+  "optimized_nc_mae": 1.0159264819213278,
   "optimal_params_all": [
     1.33,
     -5.438244571327988,

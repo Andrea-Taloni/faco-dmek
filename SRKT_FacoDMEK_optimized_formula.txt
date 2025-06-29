@@ -6,7 +6,7 @@ Training cases: 67
 Test cases: 30
 
 NC-ONLY OPTIMIZATION:
-  nc = 1.33200 (standard: 1.33300)
+  nc = 1.33000 (standard: 1.33300)
 
 FULL PARAMETER OPTIMIZATION:
   nc: 1.33000
@@ -21,5 +21,5 @@ FULL PARAMETER OPTIMIZATION:
 
 PERFORMANCE:
   Baseline MAE: 1.370 D
-  NC-optimized MAE: 1.227 D
+  NC-optimized MAE: 1.016 D
   Fully optimized MAE: 0.972 D
